@@ -37,28 +37,72 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="emR-F6-Xd1"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="Ogb-0b-kUZ" kind="show" identifier="showTodo" id="Frg-dg-x0N"/>
-                        <segue destination="czg-Dg-nM9" kind="show" identifier="showTable" id="bfm-64-n0W"/>
+                        <segue destination="Ogb-0b-kUZ" kind="show" identifier="showtodolist" id="Frg-dg-x0N"/>
+                        <segue destination="czg-Dg-nM9" kind="show" identifier="showlistandtables" id="bfm-64-n0W"/>
+                        <segue destination="JxR-Ig-w0h" kind="show" identifier="showcameraandimages" id="TSc-RP-svw"/>
+                        <segue destination="TvQ-UF-hDm" kind="show" identifier="showaudioandvideo" id="8cf-EN-qn5"/>
+                        <segue destination="oUG-WG-U63" kind="show" identifier="showmapandlocation" id="TwC-Vk-JTp"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8FE-gQ-05h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-474" y="149"/>
         </scene>
-        <!--Todo List-->
-        <scene sceneID="2Pu-vm-60I">
+        <!--Map and Location-->
+        <scene sceneID="Zqf-iF-fuk">
             <objects>
-                <viewController title="Todo List" id="Ogb-0b-kUZ" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="feU-zE-t19">
+                <viewController title="Map and Location" id="oUG-WG-U63" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kwx-hM-pyC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="YHw-j5-91l"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oy4-pn-h8i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="274" y="-550"/>
+        </scene>
+        <!--Todo List-->
+        <scene sceneID="2Pu-vm-60I">
+            <objects>
+                <viewController title="Todo List" id="Ogb-0b-kUZ" customClass="TodoViewController" customModule="TestLab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="feU-zE-t19">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WTO-fU-QJF">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TextFieldCell" focusStyle="custom" id="th3-ov-a7g">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="th3-ov-a7g" id="cUK-Wp-jKW">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ogb-0b-kUZ" id="1UN-6a-PqW"/>
+                                    <outlet property="delegate" destination="Ogb-0b-kUZ" id="8I3-J9-uEz"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WTO-fU-QJF" firstAttribute="trailing" secondItem="LLG-SD-hEg" secondAttribute="trailing" id="7Gn-nV-NEx"/>
+                            <constraint firstItem="WTO-fU-QJF" firstAttribute="leading" secondItem="LLG-SD-hEg" secondAttribute="leading" id="DpM-R5-nUh"/>
+                            <constraint firstItem="WTO-fU-QJF" firstAttribute="bottom" secondItem="LLG-SD-hEg" secondAttribute="bottom" id="eWM-4i-SPP"/>
+                            <constraint firstItem="WTO-fU-QJF" firstAttribute="top" secondItem="feU-zE-t19" secondAttribute="top" id="oej-Vm-U4W"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="LLG-SD-hEg"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gKD-KD-Mxu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="291" y="149"/>
+            <point key="canvasLocation" x="290.625" y="148.94366197183098"/>
         </scene>
         <!--List and Tables-->
         <scene sceneID="lbX-im-07V">
@@ -74,6 +118,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cdb-0P-ZFe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-474" y="960"/>
+        </scene>
+        <!--Camera and Images-->
+        <scene sceneID="hdi-aH-q2V">
+            <objects>
+                <viewController title="Camera and Images" id="JxR-Ig-w0h" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ncq-Yn-iap">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="eDF-3B-8QN"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bc5-cg-Uxc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="274" y="959"/>
+        </scene>
+        <!--Audio and Video-->
+        <scene sceneID="3nE-zq-hYC">
+            <objects>
+                <viewController title="Audio and Video" id="TvQ-UF-hDm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zsE-lO-ISl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="vc2-zy-geN"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h1n-cw-vCi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="981" y="958"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zf3-7g-Mx9">

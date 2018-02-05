@@ -10,10 +10,8 @@ import UIKit
 
 class ViewController: UITableViewController {
     
-    let contents = ["Todo List", "List and Tables", "Camera and Images", "Audio and Video", "Location"]
+    let contents = ["Todo List", "List and Tables", "Camera and Images", "Audio and Video", "Map and Location"]
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -35,13 +33,7 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch contents[indexPath.row] {
-        case "Todo List":
-            performSegue(withIdentifier: "showTodo", sender: self)
-        case "List and Tables":
-            performSegue(withIdentifier: "showTable", sender: self)
-        default:
-            break
-        }
+        let segueId = "show" + contents[indexPath.row].lowercased().replacingOccurrences(of: " ", with: "")
+        performSegue(withIdentifier: segueId, sender: self)
     }
 }
