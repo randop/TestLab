@@ -42,11 +42,38 @@
                         <segue destination="TvQ-UF-hDm" kind="show" identifier="showaudioandvideo" id="8cf-EN-qn5"/>
                         <segue destination="oUG-WG-U63" kind="show" identifier="showmapandlocation" id="TwC-Vk-JTp"/>
                         <segue destination="USR-XR-jP3" kind="show" identifier="showlistandtables" id="v1H-Ic-MQ2"/>
+                        <segue destination="dZr-RN-SOs" kind="show" identifier="showmiscellaneous" id="s0w-5R-ieC"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8FE-gQ-05h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-474" y="149"/>
+        </scene>
+        <!--Misc View Controller-->
+        <scene sceneID="joc-Eo-qel">
+            <objects>
+                <viewController title="Miscellaneous" id="dZr-RN-SOs" userLabel="Misc View Controller" customClass="MiscViewController" customModule="TestLab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vie-U4-uLD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t46-n9-jzF">
+                                <rect key="frame" x="77" y="78" width="167" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="Show Progress Indicator"/>
+                                <connections>
+                                    <action selector="showIndicator:" destination="dZr-RN-SOs" eventType="touchUpInside" id="hh8-bv-v0Z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="9Vs-3v-7O6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GSf-go-sir" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-474" y="-550"/>
         </scene>
         <!--Map and Location-->
         <scene sceneID="Zqf-iF-fuk">
