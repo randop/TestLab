@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A923348120D634040076185A /* DataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923348020D634040076185A /* DataTypes.swift */; };
 		A9242E0C202DC27100C90FBC /* ListAndTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9242E0B202DC27100C90FBC /* ListAndTableViewController.swift */; };
 		A9285F4D202B527800DA2263 /* ListAndTables.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9285F4C202B527800DA2263 /* ListAndTables.storyboard */; };
 		A933A67A2026A97F00E42667 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933A6792026A97F00E42667 /* AppDelegate.swift */; };
@@ -15,9 +16,12 @@
 		A933A6812026A97F00E42667 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A933A6802026A97F00E42667 /* Assets.xcassets */; };
 		A933A6842026A97F00E42667 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A933A6822026A97F00E42667 /* LaunchScreen.storyboard */; };
 		A93C180620289C1200116E9E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93C180520289C1200116E9E /* CameraViewController.swift */; };
+		A97110CF20D61C8400C8553D /* NewsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97110CE20D61C8400C8553D /* NewsTableCell.swift */; };
+		A97110D120D61F9100C8553D /* MasterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97110D020D61F9100C8553D /* MasterDetailViewController.swift */; };
 		A9A12D072026DA51002EF97E /* TodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A12D062026DA51002EF97E /* TodoViewController.swift */; };
 		A9A12D2A2026FE49002EF97E /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A12D292026FE49002EF97E /* TextFieldCell.swift */; };
 		A9A13DC620821FA1004918BD /* TestLabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A13DC520821FA1004918BD /* TestLabUITests.swift */; };
+		A9AD0B1720A45FD100010114 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD0B1620A45FD100010114 /* Optional.swift */; };
 		A9EB7E09202DE29B00E6F20D /* MiscViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EB7E08202DE29B00E6F20D /* MiscViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A923348020D634040076185A /* DataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTypes.swift; sourceTree = "<group>"; };
 		A9242E0B202DC27100C90FBC /* ListAndTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAndTableViewController.swift; sourceTree = "<group>"; };
 		A9285F4C202B527800DA2263 /* ListAndTables.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListAndTables.storyboard; sourceTree = "<group>"; };
 		A933A6762026A97F00E42667 /* TestLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,11 +47,14 @@
 		A933A6832026A97F00E42667 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A933A6852026A97F00E42667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A93C180520289C1200116E9E /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		A97110CE20D61C8400C8553D /* NewsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableCell.swift; sourceTree = "<group>"; };
+		A97110D020D61F9100C8553D /* MasterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterDetailViewController.swift; sourceTree = "<group>"; };
 		A9A12D062026DA51002EF97E /* TodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewController.swift; sourceTree = "<group>"; };
 		A9A12D292026FE49002EF97E /* TextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
 		A9A13DC320821FA1004918BD /* TestLabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestLabUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9A13DC520821FA1004918BD /* TestLabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLabUITests.swift; sourceTree = "<group>"; };
 		A9A13DC720821FA1004918BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9AD0B1620A45FD100010114 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		A9EB7E08202DE29B00E6F20D /* MiscViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,6 +79,7 @@
 		A9242E08202DC06700C90FBC /* List and Tables */ = {
 			isa = PBXGroup;
 			children = (
+				A97110D020D61F9100C8553D /* MasterDetailViewController.swift */,
 				A9242E0B202DC27100C90FBC /* ListAndTableViewController.swift */,
 			);
 			path = "List and Tables";
@@ -97,9 +106,9 @@
 		A933A6782026A97F00E42667 /* TestLab */ = {
 			isa = PBXGroup;
 			children = (
-				A9242E08202DC06700C90FBC /* List and Tables */,
-				A93C180420289BD000116E9E /* Camera and Images */,
-				A9A12D282026FE18002EF97E /* Todo List */,
+				A97110CD20D619D100C8553D /* Views */,
+				A9AD0B1520A45FBB00010114 /* Extensions */,
+				A9901759209DFACF006D9419 /* Controllers */,
 				A933A6792026A97F00E42667 /* AppDelegate.swift */,
 				A933A67B2026A97F00E42667 /* ViewController.swift */,
 				A933A67D2026A97F00E42667 /* Main.storyboard */,
@@ -107,7 +116,6 @@
 				A933A6802026A97F00E42667 /* Assets.xcassets */,
 				A933A6822026A97F00E42667 /* LaunchScreen.storyboard */,
 				A933A6852026A97F00E42667 /* Info.plist */,
-				A9EB7E08202DE29B00E6F20D /* MiscViewController.swift */,
 			);
 			path = TestLab;
 			sourceTree = "<group>";
@@ -120,11 +128,30 @@
 			path = "Camera and Images";
 			sourceTree = "<group>";
 		};
+		A97110CD20D619D100C8553D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A97110CE20D61C8400C8553D /* NewsTableCell.swift */,
+				A9A12D292026FE49002EF97E /* TextFieldCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A9901759209DFACF006D9419 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A9A12D282026FE18002EF97E /* Todo List */,
+				A93C180420289BD000116E9E /* Camera and Images */,
+				A9242E08202DC06700C90FBC /* List and Tables */,
+				A9EB7E08202DE29B00E6F20D /* MiscViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		A9A12D282026FE18002EF97E /* Todo List */ = {
 			isa = PBXGroup;
 			children = (
 				A9A12D062026DA51002EF97E /* TodoViewController.swift */,
-				A9A12D292026FE49002EF97E /* TextFieldCell.swift */,
 			);
 			path = "Todo List";
 			sourceTree = "<group>";
@@ -136,6 +163,15 @@
 				A9A13DC720821FA1004918BD /* Info.plist */,
 			);
 			path = TestLabUITests;
+			sourceTree = "<group>";
+		};
+		A9AD0B1520A45FBB00010114 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A9AD0B1620A45FD100010114 /* Optional.swift */,
+				A923348020D634040076185A /* DataTypes.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,12 +279,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9242E0C202DC27100C90FBC /* ListAndTableViewController.swift in Sources */,
+				A923348120D634040076185A /* DataTypes.swift in Sources */,
 				A933A67C2026A97F00E42667 /* ViewController.swift in Sources */,
+				A9AD0B1720A45FD100010114 /* Optional.swift in Sources */,
 				A9EB7E09202DE29B00E6F20D /* MiscViewController.swift in Sources */,
+				A97110D120D61F9100C8553D /* MasterDetailViewController.swift in Sources */,
 				A93C180620289C1200116E9E /* CameraViewController.swift in Sources */,
 				A9A12D072026DA51002EF97E /* TodoViewController.swift in Sources */,
 				A933A67A2026A97F00E42667 /* AppDelegate.swift in Sources */,
 				A9A12D2A2026FE49002EF97E /* TextFieldCell.swift in Sources */,
+				A97110CF20D61C8400C8553D /* NewsTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +378,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -389,7 +429,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

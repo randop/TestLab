@@ -10,7 +10,7 @@ import UIKit
 
 class ListAndTableViewController: UITableViewController {
 
-    let menus = ["CRUD"]
+    let menus = ["CRUD", "Master Detail"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +24,6 @@ class ListAndTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menus.count
     }
@@ -36,5 +32,10 @@ class ListAndTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = menus[indexPath.row]
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let segueId = "show" + menus[indexPath.row].lowercased().replacingOccurrences(of: " ", with: "")
+        performSegue(withIdentifier: segueId, sender: self)
     }
 }
