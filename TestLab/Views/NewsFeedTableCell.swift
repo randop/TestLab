@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewsTableCell: UITableViewCell {
+class NewsFeedTableCell: UITableViewCell {
     
     
     
