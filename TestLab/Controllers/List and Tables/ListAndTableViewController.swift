@@ -10,7 +10,7 @@ import UIKit
 
 class ListAndTableViewController: UITableViewController {
 
-    let menus = ["CRUD", "Master Detail", "Custom Table 1"]
+    let menus = ["CRUD", "Master Detail", "Custom Table 1", "News Feed"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

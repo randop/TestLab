@@ -26,19 +26,7 @@ class NewsFeedTableViewController: UITableViewController {
         NewsFeedItem(title: "Microsoft acquires Github",
                      url: "https://blogs.microsoft.com/blog/2018/06/04/microsoft-github-empowering-developers/",
                      image: "http://cdn1.alphr.com/sites/alphr/files/styles/simple_msn_feed/public/2018/06/40890924-4bad5ce0-6732-11e8-9648-192aa71f0830.png?itok=kwKMkFfY",
-                     body: "Today, we announced an agreement to acquire GitHub, the world’s leading software development platform. I want to share what this acquisition will mean for our industry and for developers. The era of the intelligent cloud and intelligent edge is upon us. Computing is becoming embedded in the world, with every part of our daily life and work and every aspect of our society and economy being transformed by digital technology. Developers are the builders of this new era, writing the world’s code. And GitHub is their home."),
-        NewsFeedItem(title: "News 5",
-                     url: "https://httpbin.org/anything/news5",
-                     image: "",
-                     body: ""),
-        NewsFeedItem(title: "News 6",
-                     url: "https://httpbin.org/anything/news6",
-                     image: "",
-                     body: ""),
-        NewsFeedItem(title: "News 7",
-                     url: "https://httpbin.org/anything/news7",
-                     image: "",
-                     body: "")
+                     body: "Today, we announced an agreement to acquire GitHub, the world’s leading software development platform. I want to share what this acquisition will mean for our industry and for developers. The era of the intelligent cloud and intelligent edge is upon us. Computing is becoming embedded in the world, with every part of our daily life and work and every aspect of our society and economy being transformed by digital technology. Developers are the builders of this new era, writing the world’s code. And GitHub is their home.")
     ]
     
     override func viewDidLoad() {
@@ -59,6 +47,27 @@ class NewsFeedTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsTableCell", for: indexPath)
         cell.textLabel?.text = feed[indexPath.row].title
+        cell.detailTextLabel?.text = feed[indexPath.row].body
+        let rectDimension:CGFloat = 96
+        
+        let imageUrl:URL = URL(string: feed[indexPath.row].image)!
+        DispatchQueue.global(qos: .userInteractive).async {
+            let imageData = try? Data(contentsOf: imageUrl)
+            if let imageData = imageData {
+                let image = UIImage(data: imageData)
+                let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: rectDimension, height: rectDimension))
+                imageView.contentMode = .scaleAspectFit
+                imageView.image = image
+                imageView.tag = 0
+                
+                DispatchQueue.main.async {
+                    cell.addSubview(imageView)
+                    cell.indentationWidth = rectDimension
+                    cell.indentationLevel = 1
+                }
+            }
+        }
+        
         return cell
     }
 }
