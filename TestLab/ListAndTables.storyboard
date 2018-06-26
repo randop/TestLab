@@ -9,6 +9,40 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Icon List View Controller-->
+        <scene sceneID="9u6-Tm-Gsd">
+            <objects>
+                <collectionViewController id="tdL-mL-Cjd" customClass="IconListViewController" customModule="TestLab" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Vje-UE-ZsL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="585-Dw-C5k">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="20"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Icon" id="WY8-T4-rZD">
+                                <rect key="frame" x="10" y="10" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="tdL-mL-Cjd" id="tio-Jd-bMh"/>
+                            <outlet property="delegate" destination="tdL-mL-Cjd" id="Vv4-BR-BTX"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NFf-wT-Enk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-189" y="-729"/>
+        </scene>
         <!--List and Tables-->
         <scene sceneID="l4c-EJ-DhB">
             <objects>
@@ -36,6 +70,7 @@
                         <segue destination="IRH-yH-sVf" kind="show" identifier="showmasterdetail" id="cN5-hl-kNB"/>
                         <segue destination="SGa-Re-IZz" kind="show" identifier="shownewsfeed" id="foy-AL-XWV"/>
                         <segue destination="mWo-FN-Sg0" kind="show" identifier="showcustomtable1" id="sGV-Wj-VUt"/>
+                        <segue destination="tdL-mL-Cjd" kind="show" identifier="showiconlist" id="4tc-Ii-xnu"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tlw-BL-gJ8" userLabel="First Responder" sceneMemberID="firstResponder"/>

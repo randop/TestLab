@@ -1,5 +1,5 @@
 //
-//  UISlider.swift
+//  DataTypes.swift
 //  TestLab
 //
 //  Created by Randolph on 6/17/18.
