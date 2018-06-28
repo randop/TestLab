@@ -20,10 +20,13 @@
 		A96B839D20D7B897009BF4A4 /* NewsFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96B839C20D7B897009BF4A4 /* NewsFeedTableViewController.swift */; };
 		A96B83A020D7B954009BF4A4 /* NewsFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96B839F20D7B954009BF4A4 /* NewsFeedItem.swift */; };
 		A97110D120D61F9100C8553D /* MasterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97110D020D61F9100C8553D /* MasterDetailViewController.swift */; };
+		A97B430A20E4EA9F0020FE0C /* CRUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97B430920E4EA9F0020FE0C /* CRUDViewController.swift */; };
+		A97B430C20E4FD2B0020FE0C /* CrudEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97B430B20E4FD2B0020FE0C /* CrudEditorViewController.swift */; };
+		A97B430E20E508330020FE0C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97B430D20E508330020FE0C /* Person.swift */; };
+		A97B431020E50CF40020FE0C /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97B430F20E50CF40020FE0C /* Optional.swift */; };
 		A9A12D072026DA51002EF97E /* TodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A12D062026DA51002EF97E /* TodoViewController.swift */; };
 		A9A12D2A2026FE49002EF97E /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A12D292026FE49002EF97E /* TextFieldCell.swift */; };
 		A9A13DC620821FA1004918BD /* TestLabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A13DC520821FA1004918BD /* TestLabUITests.swift */; };
-		A9AD0B1720A45FD100010114 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD0B1620A45FD100010114 /* Optional.swift */; };
 		A9BA9CE420DBCFF0006BA027 /* CustomTable1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BA9CE320DBCFF0006BA027 /* CustomTable1ViewController.swift */; };
 		A9BC836120E260C4004E7930 /* UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BC836020E260C4004E7930 /* UIKit.swift */; };
 		A9EB7E09202DE29B00E6F20D /* MiscViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EB7E08202DE29B00E6F20D /* MiscViewController.swift */; };
@@ -55,12 +58,15 @@
 		A96B839C20D7B897009BF4A4 /* NewsFeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedTableViewController.swift; sourceTree = "<group>"; };
 		A96B839F20D7B954009BF4A4 /* NewsFeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedItem.swift; sourceTree = "<group>"; };
 		A97110D020D61F9100C8553D /* MasterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterDetailViewController.swift; sourceTree = "<group>"; };
+		A97B430920E4EA9F0020FE0C /* CRUDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDViewController.swift; sourceTree = "<group>"; };
+		A97B430B20E4FD2B0020FE0C /* CrudEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrudEditorViewController.swift; sourceTree = "<group>"; };
+		A97B430D20E508330020FE0C /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		A97B430F20E50CF40020FE0C /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		A9A12D062026DA51002EF97E /* TodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewController.swift; sourceTree = "<group>"; };
 		A9A12D292026FE49002EF97E /* TextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
 		A9A13DC320821FA1004918BD /* TestLabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestLabUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9A13DC520821FA1004918BD /* TestLabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLabUITests.swift; sourceTree = "<group>"; };
 		A9A13DC720821FA1004918BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9AD0B1620A45FD100010114 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		A9BA9CE320DBCFF0006BA027 /* CustomTable1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTable1ViewController.swift; sourceTree = "<group>"; };
 		A9BC836020E260C4004E7930 /* UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKit.swift; sourceTree = "<group>"; };
 		A9EB7E08202DE29B00E6F20D /* MiscViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +98,8 @@
 				A96B839C20D7B897009BF4A4 /* NewsFeedTableViewController.swift */,
 				A9242E0B202DC27100C90FBC /* ListAndTableViewController.swift */,
 				A9382CE020E234B600277159 /* IconListViewController.swift */,
+				A97B430920E4EA9F0020FE0C /* CRUDViewController.swift */,
+				A97B430B20E4FD2B0020FE0C /* CrudEditorViewController.swift */,
 			);
 			path = "List and Tables";
 			sourceTree = "<group>";
@@ -144,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				A96B839F20D7B954009BF4A4 /* NewsFeedItem.swift */,
+				A97B430D20E508330020FE0C /* Person.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -187,7 +196,7 @@
 		A9AD0B1520A45FBB00010114 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				A9AD0B1620A45FD100010114 /* Optional.swift */,
+				A97B430F20E50CF40020FE0C /* Optional.swift */,
 				A923348020D634040076185A /* DataTypes.swift */,
 				A9BC836020E260C4004E7930 /* UIKit.swift */,
 			);
@@ -298,15 +307,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A97B430C20E4FD2B0020FE0C /* CrudEditorViewController.swift in Sources */,
+				A97B430A20E4EA9F0020FE0C /* CRUDViewController.swift in Sources */,
 				A96B83A020D7B954009BF4A4 /* NewsFeedItem.swift in Sources */,
 				A9242E0C202DC27100C90FBC /* ListAndTableViewController.swift in Sources */,
 				A923348120D634040076185A /* DataTypes.swift in Sources */,
 				A933A67C2026A97F00E42667 /* ViewController.swift in Sources */,
+				A97B430E20E508330020FE0C /* Person.swift in Sources */,
 				A9BA9CE420DBCFF0006BA027 /* CustomTable1ViewController.swift in Sources */,
 				A9382CE120E234B600277159 /* IconListViewController.swift in Sources */,
-				A9AD0B1720A45FD100010114 /* Optional.swift in Sources */,
 				A96B839D20D7B897009BF4A4 /* NewsFeedTableViewController.swift in Sources */,
 				A9EB7E09202DE29B00E6F20D /* MiscViewController.swift in Sources */,
+				A97B431020E50CF40020FE0C /* Optional.swift in Sources */,
 				A97110D120D61F9100C8553D /* MasterDetailViewController.swift in Sources */,
 				A9BC836120E260C4004E7930 /* UIKit.swift in Sources */,
 				A93C180620289C1200116E9E /* CameraViewController.swift in Sources */,

@@ -40,7 +40,7 @@ class MiscViewController: UIViewController {
     }
     
     @objc func dismissPending() {
-        print("dismiss")
+        //print("dismiss")
         self.pending.dismiss(animated: true, completion: nil)
     }
     
