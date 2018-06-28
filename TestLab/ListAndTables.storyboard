@@ -9,12 +9,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Icon List View Controller-->
+        <!--Icon List-->
         <scene sceneID="9u6-Tm-Gsd">
             <objects>
-                <collectionViewController id="tdL-mL-Cjd" customClass="IconListViewController" customModule="TestLab" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController title="Icon List" id="tdL-mL-Cjd" customClass="IconListViewController" customModule="TestLab" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Vje-UE-ZsL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="585-Dw-C5k">
@@ -48,7 +48,7 @@
             <objects>
                 <tableViewController title="List and Tables" id="Zx7-lR-bnX" customClass="ListAndTableViewController" customModule="TestLab" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="b9S-BF-xXB">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -66,6 +66,8 @@
                             <outlet property="delegate" destination="Zx7-lR-bnX" id="2Vg-en-nTD"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="EPX-Nj-xth"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <segue destination="IRH-yH-sVf" kind="show" identifier="showmasterdetail" id="cN5-hl-kNB"/>
                         <segue destination="SGa-Re-IZz" kind="show" identifier="shownewsfeed" id="foy-AL-XWV"/>
@@ -77,12 +79,12 @@
             </objects>
             <point key="canvasLocation" x="-195" y="-34"/>
         </scene>
-        <!--News Feed Table View Controller-->
+        <!--News Feed-->
         <scene sceneID="V47-o7-P5T">
             <objects>
-                <tableViewController id="SGa-Re-IZz" customClass="NewsFeedTableViewController" customModule="TestLab" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="News Feed" id="SGa-Re-IZz" customClass="NewsFeedTableViewController" customModule="TestLab" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hDQ-xI-SJJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -121,12 +123,12 @@
             </objects>
             <point key="canvasLocation" x="-195" y="716.19718309859161"/>
         </scene>
-        <!--Master Detail View Controller-->
+        <!--Master Detail-->
         <scene sceneID="2dL-Wc-Wwt">
             <objects>
-                <tableViewController id="IRH-yH-sVf" customClass="MasterDetailViewController" customModule="TestLab" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Master Detail" id="IRH-yH-sVf" customClass="MasterDetailViewController" customModule="TestLab" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="baC-5r-pFG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
@@ -241,12 +243,12 @@
             </objects>
             <point key="canvasLocation" x="757.5" y="-3.1690140845070425"/>
         </scene>
-        <!--Custom Table1 View Controller-->
+        <!--Custom Table 1-->
         <scene sceneID="mdE-UL-nQl">
             <objects>
-                <tableViewController id="mWo-FN-Sg0" customClass="CustomTable1ViewController" customModule="TestLab" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Custom Table 1" id="mWo-FN-Sg0" customClass="CustomTable1ViewController" customModule="TestLab" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wHd-Ls-Jx0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
