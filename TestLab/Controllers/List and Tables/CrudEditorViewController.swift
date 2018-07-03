@@ -9,7 +9,7 @@
 import UIKit
 
 class CrudEditorViewController: UITableViewController {
-    var itemID = ""
+    var thePerson = Person(id: "", firstname: "", lastname: "", email: "")
     
     @IBOutlet weak var firstnameTextField: UITextField!
     @IBOutlet weak var lastnameTextField: UITextField!
@@ -17,28 +17,40 @@ class CrudEditorViewController: UITableViewController {
     
     @IBAction func doneButtonAction(_ sender: Any) {
         var persons: [Person] = []
-        var willAdd = true
+        
+        if !firstnameTextField.text.isBlank {
+            thePerson.firstname = firstnameTextField.text!
+        } else {
+            thePerson.firstname = ""
+        }
+        
+        if !lastnameTextField.text.isBlank {
+            thePerson.lastname = lastnameTextField.text!
+        } else {
+            thePerson.lastname = ""
+        }
+        
+        if !emailTextField.text.isBlank {
+            thePerson.email = emailTextField.text!
+        } else {
+            thePerson.email = ""
+        }
+        
         if let personsData = UserDefaults.standard.object(forKey: "crud") as? [Data] {
-            persons = personsData.compactMap { return Person(data: $0) }
-            for person in persons {
-                if person.id == itemID {
-                    willAdd = false
+            persons = personsData.compactMap {
+                if let person = Person(data: $0) {
+                    if person.id == thePerson.id {
+                        return thePerson
+                    }
                 }
+                
+                return Person(data: $0)
             }
         }
         
-        if willAdd {
-            var newPerson = Person(id: UUID().uuidString, firstname: "", lastname: "", email: "")
-            if !firstnameTextField.text.isBlank {
-                newPerson.firstname = firstnameTextField.text!
-            }
-            if !lastnameTextField.text.isBlank {
-                newPerson.lastname = lastnameTextField.text!
-            }
-            if !emailTextField.text.isBlank {
-                newPerson.email = emailTextField.text!
-            }
-            persons.append(newPerson)
+        if thePerson.id == "" {
+            thePerson.id = UUID().uuidString
+            persons.append(thePerson)
         }
         
         let personsData = persons.map { $0.encode() }
@@ -50,6 +62,12 @@ class CrudEditorViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        firstnameTextField.text = thePerson.firstname
+        lastnameTextField.text = thePerson.lastname
+        emailTextField.text = thePerson.email
     }
 
     override func didReceiveMemoryWarning() {

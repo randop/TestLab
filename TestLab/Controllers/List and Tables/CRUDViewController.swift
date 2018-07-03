@@ -54,41 +54,28 @@ class CRUDViewController: UITableViewController {
         cell.detailTextLabel?.text = person.email
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let person = persons[indexPath.row]
+        performSegue(withIdentifier: "cruditemedit", sender: person)
+    }
 
-    /*
-    // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
 
-    /*
-    // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            
+            // Delete from the persons array and overwrite data
+            persons.remove(at: indexPath.row)
+            let personsData = persons.map { $0.encode() }
+            UserDefaults.standard.set(personsData, forKey: "crud")
+            
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 
     // MARK: - Navigation
 
@@ -96,13 +83,12 @@ class CRUDViewController: UITableViewController {
         let crudEditorViewController = segue.destination as? CrudEditorViewController
         var title = "Add Item"
         
-        if segue.identifier == "cruditemadd" {
-            crudEditorViewController?.itemID = ""
-        } else {
+        if segue.identifier == "cruditemedit" {
             title = "Edit Item"
+            let person = sender as! Person
+            crudEditorViewController?.thePerson = person
         }
         
         crudEditorViewController?.title = title
     }
-
 }

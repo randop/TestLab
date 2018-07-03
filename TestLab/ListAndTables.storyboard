@@ -89,6 +89,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="f1L-ZY-GwZ" kind="show" identifier="cruditemedit" id="fYf-Fz-R17"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bUO-aG-XPf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -451,4 +454,7 @@
             <point key="canvasLocation" x="728" y="716"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="fYf-Fz-R17"/>
+    </inferredMetricsTieBreakers>
 </document>
