@@ -16,3 +16,9 @@ extension UIColor {
         return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
     }
 }
+
+extension UITextField {
+    public var trimmedText: String? {
+        return text?.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+}

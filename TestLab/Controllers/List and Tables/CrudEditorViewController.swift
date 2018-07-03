@@ -19,19 +19,19 @@ class CrudEditorViewController: UITableViewController {
         var persons: [Person] = []
         
         if !firstnameTextField.text.isBlank {
-            thePerson.firstname = firstnameTextField.text!
+            thePerson.firstname = firstnameTextField.trimmedText!
         } else {
             thePerson.firstname = ""
         }
         
         if !lastnameTextField.text.isBlank {
-            thePerson.lastname = lastnameTextField.text!
+            thePerson.lastname = lastnameTextField.trimmedText!
         } else {
             thePerson.lastname = ""
         }
         
         if !emailTextField.text.isBlank {
-            thePerson.email = emailTextField.text!
+            thePerson.email = emailTextField.trimmedText!
         } else {
             thePerson.email = ""
         }
