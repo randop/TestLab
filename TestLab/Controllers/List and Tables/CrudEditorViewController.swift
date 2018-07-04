@@ -18,22 +18,16 @@ class CrudEditorViewController: UITableViewController {
     @IBAction func doneButtonAction(_ sender: Any) {
         var persons: [Person] = []
         
-        if !firstnameTextField.text.isBlank {
-            thePerson.firstname = firstnameTextField.trimmedText!
-        } else {
-            thePerson.firstname = ""
-        }
+        thePerson.firstname = firstnameTextField.trimmedText
+        thePerson.lastname = lastnameTextField.trimmedText
+        thePerson.email = emailTextField.trimmedText
         
-        if !lastnameTextField.text.isBlank {
-            thePerson.lastname = lastnameTextField.trimmedText!
-        } else {
-            thePerson.lastname = ""
-        }
-        
-        if !emailTextField.text.isBlank {
-            thePerson.email = emailTextField.trimmedText!
-        } else {
-            thePerson.email = ""
+        if !thePerson.email.isEmail {
+            let alert = UIAlertController(title: "Invalid Email", message: "Please enter a valid email address", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+            return
         }
         
         if let personsData = UserDefaults.standard.object(forKey: "crud") as? [Data] {

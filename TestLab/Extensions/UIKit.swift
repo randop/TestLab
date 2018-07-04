@@ -18,7 +18,10 @@ extension UIColor {
 }
 
 extension UITextField {
-    public var trimmedText: String? {
-        return text?.trimmingCharacters(in: .whitespacesAndNewlines)
+    public var trimmedText: String {
+        if let value = text {
+            return value.trimmingCharacters(in: .whitespacesAndNewlines)
+        }
+        return ""
     }
 }
