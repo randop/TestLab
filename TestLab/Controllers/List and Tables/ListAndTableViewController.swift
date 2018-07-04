@@ -36,6 +36,8 @@ class ListAndTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let segueId = "show" + menus[indexPath.row].lowercased().replacingOccurrences(of: " ", with: "")
-        performSegue(withIdentifier: segueId, sender: self)
+        if canPerformSegue(withIdentifier: segueId) {
+            performSegue(withIdentifier: segueId, sender: self)
+        }
     }
 }

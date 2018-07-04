@@ -27,3 +27,12 @@ extension String {
     }
     
 }
+
+extension Data {
+    mutating func append(_ string: String) {
+        let data = string.data(
+            using: String.Encoding.utf8,
+            allowLossyConversion: true)
+        append(data!)
+    }
+}
