@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A923348120D634040076185A /* DataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923348020D634040076185A /* DataTypes.swift */; };
 		A9242E0C202DC27100C90FBC /* ListAndTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9242E0B202DC27100C90FBC /* ListAndTableViewController.swift */; };
+		A9284F3920EE6C1C00FDB0BC /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9284F3820EE6C1C00FDB0BC /* NewsViewController.swift */; };
 		A9285F4D202B527800DA2263 /* ListAndTables.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9285F4C202B527800DA2263 /* ListAndTables.storyboard */; };
 		A933A67A2026A97F00E42667 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933A6792026A97F00E42667 /* AppDelegate.swift */; };
 		A933A67C2026A97F00E42667 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933A67B2026A97F00E42667 /* ViewController.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		A923348020D634040076185A /* DataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTypes.swift; sourceTree = "<group>"; };
 		A9242E0B202DC27100C90FBC /* ListAndTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAndTableViewController.swift; sourceTree = "<group>"; };
+		A9284F3820EE6C1C00FDB0BC /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		A9285F4C202B527800DA2263 /* ListAndTables.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListAndTables.storyboard; sourceTree = "<group>"; };
 		A933A6762026A97F00E42667 /* TestLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A933A6792026A97F00E42667 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				A9382CE020E234B600277159 /* IconListViewController.swift */,
 				A97B430920E4EA9F0020FE0C /* CRUDViewController.swift */,
 				A97B430B20E4FD2B0020FE0C /* CrudEditorViewController.swift */,
+				A9284F3820EE6C1C00FDB0BC /* NewsViewController.swift */,
 			);
 			path = "List and Tables";
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				A923348120D634040076185A /* DataTypes.swift in Sources */,
 				A933A67C2026A97F00E42667 /* ViewController.swift in Sources */,
 				A97B430E20E508330020FE0C /* Person.swift in Sources */,
+				A9284F3920EE6C1C00FDB0BC /* NewsViewController.swift in Sources */,
 				A9BA9CE420DBCFF0006BA027 /* CustomTable1ViewController.swift in Sources */,
 				A9382CE120E234B600277159 /* IconListViewController.swift in Sources */,
 				A96B839D20D7B897009BF4A4 /* NewsFeedTableViewController.swift in Sources */,

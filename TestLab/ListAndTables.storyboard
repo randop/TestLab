@@ -284,10 +284,42 @@
                             <outlet property="delegate" destination="SGa-Re-IZz" id="TyM-8z-fV4"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="WrV-fz-BjG" kind="show" identifier="viewnewsfeed" id="ge7-gs-O6W"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XnJ-hy-QkW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-195" y="716.19718309859161"/>
+        </scene>
+        <!--News View Controller-->
+        <scene sceneID="cO6-EL-ank">
+            <objects>
+                <viewController id="WrV-fz-BjG" customClass="NewsViewController" customModule="TestLab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fwn-O6-OTu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ME3-Bc-pAs">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ME3-Bc-pAs" firstAttribute="top" secondItem="fwn-O6-OTu" secondAttribute="top" id="B2b-WB-tim"/>
+                            <constraint firstItem="ME3-Bc-pAs" firstAttribute="leading" secondItem="fwn-O6-OTu" secondAttribute="leading" id="G72-qz-5uX"/>
+                            <constraint firstItem="ME3-Bc-pAs" firstAttribute="trailing" secondItem="fwn-O6-OTu" secondAttribute="trailing" id="Qd2-7y-cpm"/>
+                            <constraint firstItem="ME3-Bc-pAs" firstAttribute="bottom" secondItem="fwn-O6-OTu" secondAttribute="bottom" id="vgk-FD-3l2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="ME3-Bc-pAs" id="L21-uX-RpL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3m0-Fh-LJ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-195" y="1491.5492957746478"/>
         </scene>
         <!--Master Detail-->
         <scene sceneID="2dL-Wc-Wwt">

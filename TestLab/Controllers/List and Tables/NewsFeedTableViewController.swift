@@ -70,4 +70,17 @@ class NewsFeedTableViewController: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "viewnewsfeed", sender: indexPath)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "viewnewsfeed" {
+            let indexPath = sender as! IndexPath
+            let newsItem = feed[indexPath.row]
+            let viewController = segue.destination as? NewsViewController
+            viewController?.url = URL(string: newsItem.url)
+        }
+    }
 }

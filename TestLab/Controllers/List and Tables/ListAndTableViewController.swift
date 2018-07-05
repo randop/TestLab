@@ -10,11 +10,10 @@ import UIKit
 
 class ListAndTableViewController: UITableViewController {
 
-    let menus = ["CRUD", "Master Detail", "Custom Table 1", "News Feed" , "Icon List"]
+    let menus = ["CRUD", "CRUD Advanced", "Master Detail", "Custom Table 1", "News Feed" , "Icon List"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     override func didReceiveMemoryWarning() {
