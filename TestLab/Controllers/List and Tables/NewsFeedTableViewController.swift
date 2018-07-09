@@ -81,6 +81,8 @@ class NewsFeedTableViewController: UITableViewController {
             let newsItem = feed[indexPath.row]
             let viewController = segue.destination as? NewsViewController
             viewController?.url = URL(string: newsItem.url)
+            
+            navigationItem.backBarButtonItem?.title = ""
         }
     }
 }

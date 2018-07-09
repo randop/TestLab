@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -231,7 +232,9 @@
                             <outlet property="delegate" destination="Zx7-lR-bnX" id="2Vg-en-nTD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="tHH-c9-vc8"/>
+                    <navigationItem key="navigationItem" title="List and Tables" id="tHH-c9-vc8">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="4oL-9L-AJX"/>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <segue destination="IRH-yH-sVf" kind="show" identifier="showmasterdetail" id="cN5-hl-kNB"/>
@@ -284,6 +287,9 @@
                             <outlet property="delegate" destination="SGa-Re-IZz" id="TyM-8z-fV4"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="News Feed" id="2q8-bN-zL5">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="yBA-xa-aAg"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="WrV-fz-BjG" kind="show" identifier="viewnewsfeed" id="ge7-gs-O6W"/>
                     </connections>
@@ -302,7 +308,9 @@
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ME3-Bc-pAs">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="WrV-fz-BjG" id="Mgp-fU-Kvv"/>
+                                </connections>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -312,6 +320,7 @@
                             <constraint firstItem="ME3-Bc-pAs" firstAttribute="trailing" secondItem="fwn-O6-OTu" secondAttribute="trailing" id="Qd2-7y-cpm"/>
                             <constraint firstItem="ME3-Bc-pAs" firstAttribute="bottom" secondItem="fwn-O6-OTu" secondAttribute="bottom" id="vgk-FD-3l2"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="fem-ed-afo"/>
                     </view>
                     <connections>
                         <outlet property="webView" destination="ME3-Bc-pAs" id="L21-uX-RpL"/>
