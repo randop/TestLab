@@ -312,12 +312,26 @@
                                     <outlet property="delegate" destination="WrV-fz-BjG" id="Mgp-fU-Kvv"/>
                                 </connections>
                             </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Tz-UL-d0o">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Hhg-AM-HBw"/>
+                                    <barButtonItem title="Open in Safari" id="Szd-fX-yYy">
+                                        <connections>
+                                            <action selector="openInSafariAction:" destination="WrV-fz-BjG" id="mJj-Rn-uIm"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ME3-Bc-pAs" firstAttribute="top" secondItem="fwn-O6-OTu" secondAttribute="top" id="B2b-WB-tim"/>
                             <constraint firstItem="ME3-Bc-pAs" firstAttribute="leading" secondItem="fwn-O6-OTu" secondAttribute="leading" id="G72-qz-5uX"/>
                             <constraint firstItem="ME3-Bc-pAs" firstAttribute="trailing" secondItem="fwn-O6-OTu" secondAttribute="trailing" id="Qd2-7y-cpm"/>
+                            <constraint firstItem="0Tz-UL-d0o" firstAttribute="bottom" secondItem="fem-ed-afo" secondAttribute="bottom" id="a5M-GO-7ch"/>
+                            <constraint firstItem="0Tz-UL-d0o" firstAttribute="trailing" secondItem="fem-ed-afo" secondAttribute="trailing" id="j3n-CL-W3n"/>
+                            <constraint firstItem="0Tz-UL-d0o" firstAttribute="leading" secondItem="fem-ed-afo" secondAttribute="leading" id="mPi-I4-LZ3"/>
                             <constraint firstItem="ME3-Bc-pAs" firstAttribute="bottom" secondItem="fwn-O6-OTu" secondAttribute="bottom" id="vgk-FD-3l2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fem-ed-afo"/>

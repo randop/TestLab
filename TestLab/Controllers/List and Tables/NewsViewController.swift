@@ -12,14 +12,23 @@ class NewsViewController: UIViewController, UIWebViewDelegate {
     
     @IBOutlet weak var webView: UIWebView!
     
+    @IBAction func openInSafariAction(_ sender: UIBarButtonItem) {
+        if let aUrl = url {
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(aUrl, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(aUrl)
+            }
+        }
+    }
+    
     var url: URL?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Loading..."
-        
         if let aUrl = url {
+            self.title = "Loading..."
             webView.loadRequest(URLRequest(url: aUrl))
         }
     }
