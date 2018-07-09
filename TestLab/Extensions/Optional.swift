@@ -15,5 +15,14 @@ extension Optional where Wrapped: Collection {
             return concreteSelf.isEmpty
         }
     }
+    
+    public var trimmedText: String {
+        if self.isBlank {
+            return ""
+        } else {
+            let value = self as! String
+            return value.trimmingCharacters(in: .whitespacesAndNewlines)
+        }
+    }
 }
 

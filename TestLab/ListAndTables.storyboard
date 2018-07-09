@@ -315,10 +315,25 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Tz-UL-d0o">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <items>
+                                    <barButtonItem title="back" image="back" id="dm3-Ii-i1h">
+                                        <connections>
+                                            <action selector="goBackAction:" destination="WrV-fz-BjG" id="tae-rN-I6E"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="forward" image="forward" id="CME-gP-BCI">
+                                        <connections>
+                                            <action selector="goForwardAction:" destination="WrV-fz-BjG" id="D8U-6d-BHs"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="reload" image="reload" id="Yxd-dz-KQq">
+                                        <connections>
+                                            <action selector="refreshOrStopAction:" destination="WrV-fz-BjG" id="Hus-PM-8RD"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Hhg-AM-HBw"/>
                                     <barButtonItem title="Open in Safari" id="Szd-fX-yYy">
                                         <connections>
-                                            <action selector="openInSafariAction:" destination="WrV-fz-BjG" id="mJj-Rn-uIm"/>
+                                            <action selector="openInSafariAction:" destination="WrV-fz-BjG" id="0vF-GO-b9d"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -338,6 +353,9 @@
                     </view>
                     <connections>
                         <outlet property="webView" destination="ME3-Bc-pAs" id="L21-uX-RpL"/>
+                        <outletCollection property="webViewNavButtons" destination="dm3-Ii-i1h" collectionClass="NSMutableArray" id="E3z-VL-1zB"/>
+                        <outletCollection property="webViewNavButtons" destination="CME-gP-BCI" collectionClass="NSMutableArray" id="9HV-r1-Bv5"/>
+                        <outletCollection property="webViewNavButtons" destination="Yxd-dz-KQq" collectionClass="NSMutableArray" id="8gl-gD-XHV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3m0-Fh-LJ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -509,6 +527,11 @@
             <point key="canvasLocation" x="728" y="716"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="back" width="24" height="24"/>
+        <image name="forward" width="24" height="24"/>
+        <image name="reload" width="24" height="24"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="fYf-Fz-R17"/>
     </inferredMetricsTieBreakers>
