@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class NewsFeedTableViewController: UITableViewController {
     
@@ -72,17 +73,8 @@ class NewsFeedTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "viewnewsfeed", sender: indexPath)
+        let safariView = SFSafariViewController(url: URL(string: feed[indexPath.row].url)!)
+        present(safariView, animated: true, completion: nil)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "viewnewsfeed" {
-            let indexPath = sender as! IndexPath
-            let newsItem = feed[indexPath.row]
-            let viewController = segue.destination as? NewsViewController
-            viewController?.url = URL(string: newsItem.url)
-            
-            navigationItem.backBarButtonItem?.title = ""
-        }
-    }
 }

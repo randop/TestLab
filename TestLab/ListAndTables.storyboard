@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -290,77 +289,10 @@
                     <navigationItem key="navigationItem" title="News Feed" id="2q8-bN-zL5">
                         <barButtonItem key="backBarButtonItem" title="Back" id="yBA-xa-aAg"/>
                     </navigationItem>
-                    <connections>
-                        <segue destination="WrV-fz-BjG" kind="show" identifier="viewnewsfeed" id="ge7-gs-O6W"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XnJ-hy-QkW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-195" y="716.19718309859161"/>
-        </scene>
-        <!--News View Controller-->
-        <scene sceneID="cO6-EL-ank">
-            <objects>
-                <viewController id="WrV-fz-BjG" customClass="NewsViewController" customModule="TestLab" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fwn-O6-OTu">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ME3-Bc-pAs">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <connections>
-                                    <outlet property="delegate" destination="WrV-fz-BjG" id="Mgp-fU-Kvv"/>
-                                </connections>
-                            </webView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Tz-UL-d0o">
-                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
-                                <items>
-                                    <barButtonItem title="back" image="back" id="dm3-Ii-i1h">
-                                        <connections>
-                                            <action selector="goBackAction:" destination="WrV-fz-BjG" id="tae-rN-I6E"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="forward" image="forward" id="CME-gP-BCI">
-                                        <connections>
-                                            <action selector="goForwardAction:" destination="WrV-fz-BjG" id="D8U-6d-BHs"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="reload" image="reload" id="Yxd-dz-KQq">
-                                        <connections>
-                                            <action selector="refreshOrStopAction:" destination="WrV-fz-BjG" id="Hus-PM-8RD"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Hhg-AM-HBw"/>
-                                    <barButtonItem title="Open in Safari" id="Szd-fX-yYy">
-                                        <connections>
-                                            <action selector="openInSafariAction:" destination="WrV-fz-BjG" id="0vF-GO-b9d"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="ME3-Bc-pAs" firstAttribute="top" secondItem="fwn-O6-OTu" secondAttribute="top" id="B2b-WB-tim"/>
-                            <constraint firstItem="ME3-Bc-pAs" firstAttribute="leading" secondItem="fwn-O6-OTu" secondAttribute="leading" id="G72-qz-5uX"/>
-                            <constraint firstItem="ME3-Bc-pAs" firstAttribute="trailing" secondItem="fwn-O6-OTu" secondAttribute="trailing" id="Qd2-7y-cpm"/>
-                            <constraint firstItem="0Tz-UL-d0o" firstAttribute="bottom" secondItem="fem-ed-afo" secondAttribute="bottom" id="a5M-GO-7ch"/>
-                            <constraint firstItem="0Tz-UL-d0o" firstAttribute="trailing" secondItem="fem-ed-afo" secondAttribute="trailing" id="j3n-CL-W3n"/>
-                            <constraint firstItem="0Tz-UL-d0o" firstAttribute="leading" secondItem="fem-ed-afo" secondAttribute="leading" id="mPi-I4-LZ3"/>
-                            <constraint firstItem="ME3-Bc-pAs" firstAttribute="bottom" secondItem="fwn-O6-OTu" secondAttribute="bottom" id="vgk-FD-3l2"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="fem-ed-afo"/>
-                    </view>
-                    <connections>
-                        <outlet property="webView" destination="ME3-Bc-pAs" id="L21-uX-RpL"/>
-                        <outletCollection property="webViewNavButtons" destination="dm3-Ii-i1h" collectionClass="NSMutableArray" id="E3z-VL-1zB"/>
-                        <outletCollection property="webViewNavButtons" destination="CME-gP-BCI" collectionClass="NSMutableArray" id="9HV-r1-Bv5"/>
-                        <outletCollection property="webViewNavButtons" destination="Yxd-dz-KQq" collectionClass="NSMutableArray" id="8gl-gD-XHV"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3m0-Fh-LJ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-195" y="1491.5492957746478"/>
         </scene>
         <!--Master Detail-->
         <scene sceneID="2dL-Wc-Wwt">
@@ -527,11 +459,6 @@
             <point key="canvasLocation" x="728" y="716"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="back" width="24" height="24"/>
-        <image name="forward" width="24" height="24"/>
-        <image name="reload" width="24" height="24"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="fYf-Fz-R17"/>
     </inferredMetricsTieBreakers>
