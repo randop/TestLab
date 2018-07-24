@@ -6,9 +6,67 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Picture Detail View Controller-->
+        <scene sceneID="n1E-lf-pLv">
+            <objects>
+                <viewController storyboardIdentifier="PictureDetail" id="Ae0-KE-XtM" customClass="PictureDetailViewController" customModule="TestLab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sM4-Zx-mY8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4eY-aG-W79">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jId-pt-5N8" firstAttribute="bottom" secondItem="4eY-aG-W79" secondAttribute="bottom" id="DK2-ym-Frb"/>
+                            <constraint firstItem="jId-pt-5N8" firstAttribute="trailing" secondItem="4eY-aG-W79" secondAttribute="trailing" id="EOU-KN-6XH"/>
+                            <constraint firstItem="4eY-aG-W79" firstAttribute="top" secondItem="jId-pt-5N8" secondAttribute="top" id="eQi-uY-sKa"/>
+                            <constraint firstItem="4eY-aG-W79" firstAttribute="leading" secondItem="jId-pt-5N8" secondAttribute="leading" id="yrG-EU-mCW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jId-pt-5N8"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="4eY-aG-W79" id="85p-4s-Sed"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jlc-A4-c3R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-883" y="-1400"/>
+        </scene>
+        <!--Pictures-->
+        <scene sceneID="5J4-RI-1XU">
+            <objects>
+                <tableViewController title="Pictures" id="rTA-dv-LH6" customClass="PicturesTableViewController" customModule="TestLab" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="h2c-sp-rYi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Picture" id="8oJ-fZ-G6V">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8oJ-fZ-G6V" id="S1y-WI-qZP">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="rTA-dv-LH6" id="Lyw-3f-gXR"/>
+                            <outlet property="delegate" destination="rTA-dv-LH6" id="deQ-7s-Rm9"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="97s-4b-twK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-882" y="-737"/>
+        </scene>
         <!--Icon List-->
         <scene sceneID="9u6-Tm-Gsd">
             <objects>
@@ -241,6 +299,7 @@
                         <segue destination="mWo-FN-Sg0" kind="show" identifier="showcustomtable1" id="sGV-Wj-VUt"/>
                         <segue destination="tdL-mL-Cjd" kind="show" identifier="showiconlist" id="4tc-Ii-xnu"/>
                         <segue destination="ACe-1P-3sh" kind="show" identifier="showcrud" id="a6c-TQ-Qvv"/>
+                        <segue destination="rTA-dv-LH6" kind="show" identifier="showpictures" id="Rs8-eN-QAp"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tlw-BL-gJ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
