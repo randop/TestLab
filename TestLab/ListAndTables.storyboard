@@ -30,9 +30,9 @@ CQ
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="4eY-aG-W79" firstAttribute="top" secondItem="NwP-bw-9g5" secondAttribute="top" id="GQ0-CM-55h"/>
+                                    <constraint firstItem="4eY-aG-W79" firstAttribute="centerY" secondItem="NwP-bw-9g5" secondAttribute="centerY" id="I1i-lp-wAt"/>
+                                    <constraint firstItem="4eY-aG-W79" firstAttribute="centerX" secondItem="NwP-bw-9g5" secondAttribute="centerX" id="KtP-m7-Fir"/>
                                     <constraint firstAttribute="trailing" secondItem="4eY-aG-W79" secondAttribute="trailing" id="V4S-ju-PqH"/>
-                                    <constraint firstItem="4eY-aG-W79" firstAttribute="centerY" secondItem="NwP-bw-9g5" secondAttribute="centerY" id="dCR-iT-HVk"/>
-                                    <constraint firstItem="4eY-aG-W79" firstAttribute="centerX" secondItem="NwP-bw-9g5" secondAttribute="centerX" id="dcb-2N-xWV"/>
                                     <constraint firstItem="4eY-aG-W79" firstAttribute="leading" secondItem="NwP-bw-9g5" secondAttribute="leading" id="lUG-dY-FrD"/>
                                     <constraint firstAttribute="bottom" secondItem="4eY-aG-W79" secondAttribute="bottom" id="ntB-MI-2Lf"/>
                                 </constraints>

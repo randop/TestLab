@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UITableViewController {
     
-    let contents = ["Todo List", "List and Tables", "Camera and Images", "Audio and Video", "Map and Location", "Miscellaneous"]
+    let contents = ["Todo List", "List and Tables", "Camera and Images", "Audio and Video", "Map and Location", "Guess the flag", "Miscellaneous"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +34,8 @@ class ViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let segueId = "show" + contents[indexPath.row].lowercased().replacingOccurrences(of: " ", with: "")
-        performSegue(withIdentifier: segueId, sender: self)
+        if canPerformSegue(withIdentifier: segueId) {
+            performSegue(withIdentifier: segueId, sender: self)
+        }
     }
 }

@@ -43,6 +43,7 @@
                         <segue destination="oUG-WG-U63" kind="show" identifier="showmapandlocation" id="TwC-Vk-JTp"/>
                         <segue destination="USR-XR-jP3" kind="show" identifier="showlistandtables" id="v1H-Ic-MQ2"/>
                         <segue destination="dZr-RN-SOs" kind="show" identifier="showmiscellaneous" id="s0w-5R-ieC"/>
+                        <segue destination="hKJ-0K-uaQ" kind="show" identifier="showguesstheflag" id="EDy-M5-qkm"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8FE-gQ-05h" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -139,6 +140,60 @@
             </objects>
             <point key="canvasLocation" x="-474" y="673"/>
         </scene>
+        <!--Guess the flag-->
+        <scene sceneID="F8P-zm-YSn">
+            <objects>
+                <viewController title="Guess the flag" id="hKJ-0K-uaQ" customClass="GuessFlagViewController" customModule="TestLab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a9M-cD-MUi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXm-Bn-VNU">
+                                <rect key="frame" x="60" y="230" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="bNw-JX-h8O"/>
+                                    <constraint firstAttribute="height" constant="100" id="oeN-PG-rVL"/>
+                                </constraints>
+                                <state key="normal" title="Button2" image="spain"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgC-Wi-93p">
+                                <rect key="frame" x="60" y="360" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="6EY-oX-19t"/>
+                                    <constraint firstAttribute="height" constant="100" id="8Vc-1c-6vf"/>
+                                </constraints>
+                                <state key="normal" title="Button3" image="uk"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="As9-Cm-J2b">
+                                <rect key="frame" x="60" y="100" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="IW2-qE-e9I"/>
+                                    <constraint firstAttribute="width" constant="200" id="QHL-8Q-BQT"/>
+                                </constraints>
+                                <state key="normal" title="Button1" image="us"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="As9-Cm-J2b" firstAttribute="centerX" secondItem="y4b-Pg-6es" secondAttribute="centerX" id="8G5-ra-BvN"/>
+                            <constraint firstItem="xgC-Wi-93p" firstAttribute="top" secondItem="iXm-Bn-VNU" secondAttribute="bottom" constant="30" id="F6X-Es-iqL"/>
+                            <constraint firstItem="iXm-Bn-VNU" firstAttribute="top" secondItem="As9-Cm-J2b" secondAttribute="bottom" constant="30" id="NGX-Ik-gcI"/>
+                            <constraint firstItem="As9-Cm-J2b" firstAttribute="top" secondItem="y4b-Pg-6es" secondAttribute="top" constant="36" id="cTh-7Q-VYM"/>
+                            <constraint firstItem="iXm-Bn-VNU" firstAttribute="centerX" secondItem="As9-Cm-J2b" secondAttribute="centerX" id="uu0-bK-t0b"/>
+                            <constraint firstItem="xgC-Wi-93p" firstAttribute="centerX" secondItem="iXm-Bn-VNU" secondAttribute="centerX" id="w8i-2B-Mcz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="y4b-Pg-6es"/>
+                    </view>
+                    <connections>
+                        <outlet property="button1" destination="As9-Cm-J2b" id="oDp-zc-nY1"/>
+                        <outlet property="button2" destination="iXm-Bn-VNU" id="rfH-Us-Tqj"/>
+                        <outlet property="button3" destination="xgC-Wi-93p" id="ZQL-Sc-53T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T4f-Xy-07E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1149.375" y="891.54929577464793"/>
+        </scene>
         <!--Camera and Images-->
         <scene sceneID="hdi-aH-q2V">
             <objects>
@@ -224,4 +279,9 @@
             <point key="canvasLocation" x="-1172" y="149"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="spain" width="200" height="100"/>
+        <image name="uk" width="200" height="100"/>
+        <image name="us" width="200" height="100"/>
+    </resources>
 </document>

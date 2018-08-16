@@ -24,6 +24,7 @@
 		A97B430C20E4FD2B0020FE0C /* CrudEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97B430B20E4FD2B0020FE0C /* CrudEditorViewController.swift */; };
 		A97B430E20E508330020FE0C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97B430D20E508330020FE0C /* Person.swift */; };
 		A97B431020E50CF40020FE0C /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97B430F20E50CF40020FE0C /* Optional.swift */; };
+		A97BA4FD2125722F0018D466 /* GuessFlagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97BA4FC2125722F0018D466 /* GuessFlagViewController.swift */; };
 		A9A12D072026DA51002EF97E /* TodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A12D062026DA51002EF97E /* TodoViewController.swift */; };
 		A9A12D2A2026FE49002EF97E /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A12D292026FE49002EF97E /* TextFieldCell.swift */; };
 		A9A13DC620821FA1004918BD /* TestLabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A13DC520821FA1004918BD /* TestLabUITests.swift */; };
@@ -74,6 +75,7 @@
 		A97B430B20E4FD2B0020FE0C /* CrudEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrudEditorViewController.swift; sourceTree = "<group>"; };
 		A97B430D20E508330020FE0C /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		A97B430F20E50CF40020FE0C /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
+		A97BA4FC2125722F0018D466 /* GuessFlagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessFlagViewController.swift; sourceTree = "<group>"; };
 		A9A12D062026DA51002EF97E /* TodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewController.swift; sourceTree = "<group>"; };
 		A9A12D292026FE49002EF97E /* TextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
 		A9A13DC320821FA1004918BD /* TestLabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestLabUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -208,6 +210,7 @@
 				A93C180420289BD000116E9E /* Camera and Images */,
 				A9242E08202DC06700C90FBC /* List and Tables */,
 				A9EB7E08202DE29B00E6F20D /* MiscViewController.swift */,
+				A97BA4FC2125722F0018D466 /* GuessFlagViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				A96B839D20D7B897009BF4A4 /* NewsFeedTableViewController.swift in Sources */,
 				A9EB7E09202DE29B00E6F20D /* MiscViewController.swift in Sources */,
 				A97B431020E50CF40020FE0C /* Optional.swift in Sources */,
+				A97BA4FD2125722F0018D466 /* GuessFlagViewController.swift in Sources */,
 				A97110D120D61F9100C8553D /* MasterDetailViewController.swift in Sources */,
 				A9BC836120E260C4004E7930 /* UIKit.swift in Sources */,
 				A93C180620289C1200116E9E /* CameraViewController.swift in Sources */,
