@@ -18,6 +18,7 @@ class GuessFlagViewController: UIViewController {
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
+    @IBOutlet weak var scoreLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +63,12 @@ class GuessFlagViewController: UIViewController {
             score -= 1
         }
         
+        if score<0 {
+            score = 0
+        }
+        
         let mytext = "Your score is \(score)."
+        scoreLabel.text = mytext
         let ac = UIAlertController(title: title, message: mytext, preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
         present(ac, animated: true)
