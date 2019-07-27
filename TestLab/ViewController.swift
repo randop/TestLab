@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UITableViewController {
     
-    let contents = ["Todo List", "List and Tables", "Camera and Images", "Audio and Video", "Map and Location", "Guess the flag", "Miscellaneous"]
+    let contents = ["Todo List", "List and Tables", "Camera and Images", "Audio and Video", "Map and Location", "Guess the flag", "QR Code Reader", "Miscellaneous"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
