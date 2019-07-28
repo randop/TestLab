@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class QRViewController: UIViewController {
+class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     @IBOutlet weak var cameraView: UIView!
     
     @IBAction func buttonTap(_ sender: Any) {
@@ -82,12 +82,27 @@ class QRViewController: UIViewController {
             if(session?.canAddOutput(output!) == true){
                 session?.addOutput(output!)
             }
+            let captureMetadataOutput = AVCaptureMetadataOutput()
+            session?.addOutput(captureMetadataOutput)
+            captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
+            captureMetadataOutput.metadataObjectTypes = [AVMetadataObject.ObjectType.qr]
             previewLayer = AVCaptureVideoPreviewLayer(session: session!)
             previewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
             previewLayer?.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
             previewLayer?.frame = cameraView.bounds
             cameraView.layer.addSublayer(previewLayer!)
             session?.startRunning()
+        }
+    }
+    
+    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+        print("metadataOutput")
+        if metadataObjects.count == 0 {
+            return
+        }		
+        let metadataObj = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
+        if metadataObj.type == AVMetadataObject.ObjectType.qr {
+            print(metadataObj.stringValue)
         }
     }
     
