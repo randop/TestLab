@@ -13,13 +13,15 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     @IBOutlet weak var cameraView: UIView!
     
     @IBAction func buttonTap(_ sender: Any) {
-        startCapture()
+        //startCapture()
     }
     
     var session: AVCaptureSession?
     var input: AVCaptureDeviceInput?
     var output: AVCaptureStillImageOutput?
     var previewLayer: AVCaptureVideoPreviewLayer?
+    
+    var myQR: [String: Bool] = [:]
     
     let DB = DAO.instance
     
@@ -106,8 +108,12 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
             let qrObject = metadataObject as! AVMetadataMachineReadableCodeObject
             if qrObject.type == AVMetadataObject.ObjectType.qr {
                 if let qrValue = qrObject.stringValue {
-                    let qrID = String(DB.addQr(value: qrValue)!)
-                    print(qrID)
+                    //Uniquely scans for QR on current session
+                    if !myQR.keys.contains(qrValue) {
+                        myQR[qrValue] = true
+                        let _ = String(DB.addQr(value: qrValue)!)
+                        print(qrValue)
+                    }
                 }
             }
         }
