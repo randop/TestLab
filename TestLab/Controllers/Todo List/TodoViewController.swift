@@ -40,6 +40,7 @@ class TodoViewController: UIViewController, UITableViewDataSource, UITableViewDe
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
             if let textField = alert?.textFields![0].trimmedText {
                 if textField.count > 0 {
+                    self.todosTable.scrollToBottom()
                     if let newID = self.DB.addTodo(value: textField) {
                         self.todos.append(Todo(id: newID, value: textField, done: false))
                         self.todosTable.beginUpdates()
