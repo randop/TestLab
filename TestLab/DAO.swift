@@ -70,7 +70,7 @@ class DAO {
     
     func createTodosTable() {
         let id = Expression<Int64>("id")
-        let value = Expression<String?>("value")
+        let value = Expression<String>("value")
         let done = Expression<Bool>("done")
         
         do {
@@ -97,14 +97,27 @@ class DAO {
     }
     
     func addTodo(value aValue: String) -> Int64? {
-        let value = Expression<String?>("value")
+        let value = Expression<String>("value")
+        let done = Expression<Bool>("done")
+        
         do {
-            let insert = self.todosTable.insert(value <- aValue)
+            let insert = self.todosTable.insert(value <- aValue, done <- false)
             let id = try db!.run(insert)
             return id
         } catch {
-            print("Insert QR failed")
+            print("Insert Todo failed")
             return -1
+        }
+    }
+    
+    func updateTodoDone(id theID: Int64, isDone: Bool) {
+        let id = Expression<Int64>("id")
+        let done = Expression<Bool>("done")
+        do {
+            let todo = self.todosTable.filter(id == theID)
+            try db!.run(todo.update(done <- isDone))
+        } catch {
+            //failed
         }
     }
     
@@ -127,15 +140,15 @@ class DAO {
     func getTodos() -> [Todo] {
         var todos = [Todo]()
         let id = Expression<Int64>("id")
-        let value = Expression<String?>("value")
+        let value = Expression<String>("value")
         let done = Expression<Bool>("done")
         
         do {
             for todo in try db!.prepare(self.todosTable) {
-                todos.append(Todo(id: todo[id], value: todo[value]!, done: todo[done]))
+                todos.append(Todo(id: todo[id], value: todo[value], done: todo[done]))
             }
         } catch {
-            //print("Select failed")
+            print("Select failed")
         }
         return todos
     }

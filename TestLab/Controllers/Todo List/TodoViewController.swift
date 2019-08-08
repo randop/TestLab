@@ -12,11 +12,15 @@ class TodoViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     let DB = DAO.instance
     var todos = [Todo]()
+    
+    @IBOutlet weak var todosTable: UITableView!
+    @IBAction func addTap(_ sender: Any) {
+        addTodoAction()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        loadTodos()
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,30 +28,54 @@ class TodoViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Dispose of any resources that can be recreated.
     }
     
+    func loadTodos() {
+        todos = DB.getTodos()
+    }
+    
+    func addTodoAction() {
+        let alert = UIAlertController(title: "Add Todo", message: nil, preferredStyle: .alert)
+        alert.addTextField { (textField) in
+            textField.placeholder = "Enter Todo:"
+        }
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+            if let textField = alert?.textFields![0].trimmedText {
+                if textField.count > 0 {
+                    if let newID = self.DB.addTodo(value: textField) {
+                        self.todos.append(Todo(id: newID, value: textField, done: false))
+                        self.todosTable.beginUpdates()
+                        let indexPath = IndexPath(item: self.todos.count - 1, section: 0)
+                        self.todosTable.insertRows(at: [indexPath], with: .right)
+                        self.todosTable.endUpdates()
+                    }
+                }
+            }
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: false, completion: nil)
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return todos.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let strokeEffect: [NSAttributedStringKey : Any] = [
-            NSAttributedStringKey.strikethroughStyle: NSUnderlineStyle.styleSingle.rawValue,
-            NSAttributedStringKey.strikethroughColor: UIColor.red,
-            NSAttributedStringKey.foregroundColor: UIColor.gray
-        ]
-        cell.textLabel?.attributedText = NSAttributedString(string: "test", attributes: strokeEffect)
-    
+        if todos[indexPath.row].done {
+            let strokeEffect: [NSAttributedStringKey : Any] = [
+                NSAttributedStringKey.strikethroughStyle: NSUnderlineStyle.styleSingle.rawValue,
+                NSAttributedStringKey.strikethroughColor: UIColor.red,
+                NSAttributedStringKey.foregroundColor: UIColor.gray
+            ]
+            cell.textLabel?.attributedText = NSAttributedString(string: todos[indexPath.row].value, attributes: strokeEffect)
+        } else {
+            cell.textLabel?.text = todos[indexPath.row].value
+        }
         return cell
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        todos[indexPath.row].done = !todos[indexPath.row].done
+        DB.updateTodoDone(id: todos[indexPath.row].id, isDone: todos[indexPath.row].done)
+        todosTable.reloadRows(at: [indexPath], with: .right)
     }
-    */
-
 }
