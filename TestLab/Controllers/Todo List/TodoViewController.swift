@@ -9,6 +9,9 @@
 import UIKit
 
 class TodoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    let DB = DAO.instance
+    var todos = [Todo]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +29,14 @@ class TodoViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TextFieldCell", for: indexPath)
-        cell.textLabel?.text = "text"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let strokeEffect: [NSAttributedStringKey : Any] = [
+            NSAttributedStringKey.strikethroughStyle: NSUnderlineStyle.styleSingle.rawValue,
+            NSAttributedStringKey.strikethroughColor: UIColor.red,
+            NSAttributedStringKey.foregroundColor: UIColor.gray
+        ]
+        cell.textLabel?.attributedText = NSAttributedString(string: "test", attributes: strokeEffect)
+    
         return cell
     }
 

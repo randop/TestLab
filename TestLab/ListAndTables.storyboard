@@ -299,6 +299,9 @@ CQ
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="STc-YX-4Kd" kind="show" identifier="showcrudadvanced" trigger="accessoryAction" id="TXI-Cx-ny9"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -322,6 +325,34 @@ CQ
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tlw-BL-gJ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-195" y="-34"/>
+        </scene>
+        <!--CRUD Advanced-->
+        <scene sceneID="4FS-kI-3ce">
+            <objects>
+                <tableViewController title="CRUD Advanced" id="STc-YX-4Kd" customClass="CrudAdvancedViewController" customModule="TestLab" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BxG-y3-GQQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="JjJ-qg-Yms">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JjJ-qg-Yms" id="roH-kj-ndd">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="STc-YX-4Kd" id="hbM-ma-imw"/>
+                            <outlet property="delegate" destination="STc-YX-4Kd" id="eB4-1P-pCH"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JG4-uC-yCZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-883" y="716"/>
         </scene>
         <!--News Feed-->
         <scene sceneID="V47-o7-P5T">

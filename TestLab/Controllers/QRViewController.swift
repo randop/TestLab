@@ -21,6 +21,8 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     var output: AVCaptureStillImageOutput?
     var previewLayer: AVCaptureVideoPreviewLayer?
     
+    let DB = DAO.instance
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         session = AVCaptureSession()
@@ -96,13 +98,18 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     }
     
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-        print("metadataOutput")
+        //print("metadataOutput \(metadataObjects.count)")
         if metadataObjects.count == 0 {
             return
-        }		
-        let metadataObj = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
-        if metadataObj.type == AVMetadataObject.ObjectType.qr {
-            print(metadataObj.stringValue)
+        }
+        for metadataObject in metadataObjects {
+            let qrObject = metadataObject as! AVMetadataMachineReadableCodeObject
+            if qrObject.type == AVMetadataObject.ObjectType.qr {
+                if let qrValue = qrObject.stringValue {
+                    let qrID = String(DB.addQr(value: qrValue)!)
+                    print(qrID)
+                }
+            }
         }
     }
     
