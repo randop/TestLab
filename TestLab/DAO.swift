@@ -121,6 +121,16 @@ class DAO {
         }
     }
     
+    func deleteTodo(id theID: Int64) {
+        let id = Expression<Int64>("id")
+        do {
+            let todo = self.todosTable.filter(id == theID)
+            try db!.run(todo.delete())
+        } catch {
+            //failed
+        }
+    }
+    
     func getQrs() -> [QR] {
         var qrs = [QR]()
         let id = Expression<Int64>("id")

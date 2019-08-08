@@ -79,4 +79,25 @@ class TodoViewController: UIViewController, UITableViewDataSource, UITableViewDe
         DB.updateTodoDone(id: todos[indexPath.row].id, isDone: todos[indexPath.row].done)
         todosTable.reloadRows(at: [indexPath], with: .right)
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            //void
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete") { (rowAction, indexPath)  in
+            self.todosTable.beginUpdates()
+            self.DB.deleteTodo(id: self.todos[indexPath.row].id)
+            self.todos.remove(at: indexPath.row)
+            self.todosTable.deleteRows(at: [indexPath], with: .none)
+            self.todosTable.endUpdates()
+        }
+        return [deleteAction]
+    }
 }
